@@ -1,0 +1,80 @@
+.signUpContainer {
+    display: flex;
+    background-color: #222; /* Dark background */
+    color: #fff;
+    padding-left: 5%;
+    align-items: center; /* Vertically align form and image */
+    justify-content: space-between; /* Space out form and image */
+    height: 100vh;
+  }
+  
+  .signUpForm {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  .signUpForm h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+  
+  .signUpForm p {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+  
+  .signUpForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #eee;
+  }
+  
+  .signUpForm input[type="email"],
+  .signUpForm input[type="text"],
+  .signUpForm input[type="password"] {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+    box-sizing: border-box; /* Prevent padding from increasing the input's overall width */
+  }
+  
+  .signUpForm .submitButton {
+    background-color: #eee;
+      color: #333;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background-color 0.3s ease;
+      width: 50%;
+      margin-top: 20px;
+  }
+  
+  .signUpForm .submitButton:hover {
+    background-color: #ddd;
+  }
+  
+  .signUpImage {
+    flex: 1;
+    max-width: 50%;
+    height: 100%; /* Make the image container take full height */
+  }
+  
+  .signUpImage img {
+    display: block;
+    width: 100%;
+    height: 100%; /* Make the image take full height of its container */
+    /* border-radius: 5px; */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+  }
+  
+  .inputGroup {
+    margin-bottom: 20px;
+  }
+  

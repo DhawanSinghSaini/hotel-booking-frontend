@@ -1,0 +1,68 @@
+/* client/src/components/Navbar.module.css */
+.nav {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    margin-left: 3%;
+  }
+
+  .left{
+    display: flex;
+    }
+  
+  .logoLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .logoImage {
+    height: 30px; /* Adjust the height as needed */
+    margin-right: 15px;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+  }
+  
+  .navItem {
+    /* No specific styling here for now */
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .navLink:hover {
+    color: #ccc;
+  }
+  
+  .authSection {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .authLink {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0;
+    font-size: 0.9rem;
+  }
+  
+  .authLink:hover {
+    background-color: #fff;
+    color: #000;
+  }

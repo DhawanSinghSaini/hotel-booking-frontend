@@ -1,0 +1,152 @@
+.parentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 100vw;
+  color: black;
+}
+
+.header {
+  text-align: center;
+}
+
+/* Grid Layout */
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Responsive Layout - Below 1030px (2 columns, 1 row) */
+@media (max-width: 1030px) {
+  .parentContainer{
+    width: 105vw;
+  }
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+/* Responsive Layout - Below 800px (1 column, 3 rows) */
+@media (max-width: 800px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+.inputContainer {
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.label {
+  color: black;
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.inputField {
+  background: transparent;
+  color: black;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.inputField[type="date"] {
+  cursor: pointer;
+}
+
+/* Styling to make the calendar pop */
+.inputField::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Makes the calendar icon white on darker backgrounds */
+}
+
+.priceContainer {
+  background-color: whitesmoke;
+  padding: 10%;
+  color: black;
+}
+
+.priceRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* Payment section */
+.paymentContainer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.paymentHeading {
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 15px;
+}
+
+/* Grid layout for payment buttons */
+.paymentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Pay at hotel button */
+.payAtHotel {
+  background-color: #18BD3C;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.payAtHotel:hover {
+  background-color: #0fa32c;
+}
+
+/* Disabled payment button */
+.disabledPayment {
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paymentIcon {
+  width: 80px;
+  height: 40px;
+}
+
+/* Confirm Booking Button */
+.confirmButton {
+  background-color: #18BD3C;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 200px;
+}

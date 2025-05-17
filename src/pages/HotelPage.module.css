@@ -1,0 +1,283 @@
+.hotelContainer {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+.hotelGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.hotelImageColumn {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hotelImageWrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 600px; /* Increased height here.  Adjust as needed. Original was 400px */
+}
+
+.hotelImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.hotelDescriptionColumn {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hotelDescriptionCard {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotelName {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.hotelAddress {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.hotelRating {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #FFC107;
+}
+
+.hotelDescription {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.amenitiesSubheading {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.amenitiesListContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.amenitiesList {
+  flex: 1;
+  margin-right: 10px;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.amenitiesListLeft {
+  flex: 1;
+  margin-right: 10px;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+.amenitiesListRight {
+  flex: 1;
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+
+.amenityItem {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .hotelGrid {
+    flex-direction: column;
+  }
+
+  .amenitiesListContainer {
+    flex-direction: column;
+  }
+}
+
+/* CSS for the new rooms section */
+.roomsContainer {
+  padding: 20px;
+  max-width: 100vw;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+}
+
+.roomsHeading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.roomsHeading h2 {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.roomsHeading p {
+  font-size: 16px;
+  color: #666;
+}
+
+.roomsList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (max-width: 769px) {
+  .roomsList {
+    grid-template-columns: repeat(1, 1fr); /* 1 column */
+    grid-template-rows: repeat(4, auto); /* 4 rows */
+  }
+}
+
+.hotelPolicyContainer {
+  padding: 20px;
+  /* max-width: 100vw; */
+  margin: 0 auto;
+  background-color: white;
+}
+
+.hotelPolicy {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #fff; /* White background */
+}
+
+.mainPolicyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.hotelPolicyLabel {
+  font-size: 24px;
+  margin-bottom: 0;
+  color: #000; /* Black text */
+}
+
+.chevronIcon {
+  font-size: 20px;
+  display: none; /* Hide chevron */
+}
+
+.policySection {
+  margin-bottom: 20px;
+}
+
+.policyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.policyHeader h3 {
+  font-size: 20px;
+  margin-bottom: 0;
+  color: #000; /* Black text */
+}
+
+.policyBody {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  color: #000; /* Black text */
+}
+
+
+.carousel {
+  position: relative; /* Stack images on top of each other */
+  width: 98vw; /* Full viewport width */
+  height: 90vh; /* Full viewport height */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.carousel img {
+  position: absolute; /* Stack all images on top of each other */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make each image cover the container */
+  height: 100%; /* Make each image fill the container */
+  object-fit: cover; /* Maintain aspect ratio */
+  opacity: 0; /* Make all images hidden by default */
+  animation: reveal 40s infinite; /* Reveal each image in sequence */
+}
+
+/* Assign animation delays to each image */
+.carousel img:nth-child(1) {
+  animation-delay: 0s;
+}
+.carousel img:nth-child(2) {
+  animation-delay: 5s;
+}
+.carousel img:nth-child(3) {
+  animation-delay: 10s;
+}
+.carousel img:nth-child(4) {
+  animation-delay: 15s;
+}
+.carousel img:nth-child(5) {
+  animation-delay: 20s;
+}
+.carousel img:nth-child(6) {
+  animation-delay: 25s;
+}
+.carousel img:nth-child(7) {
+  animation-delay: 30s;
+}
+.carousel img:nth-child(8) {
+  animation-delay: 35s;
+}
+
+/* Keyframes for revealing images */
+@keyframes reveal {
+  0% {
+    opacity: 0; /* Keep the image hidden */
+  }
+  10% {
+    opacity: 1; /* Make the image visible */
+  }
+  20% {
+    opacity: 0; /* Hide the image again */
+  }
+  100% {
+    opacity: 0; /* Ensure the image stays hidden until its turn comes again */
+  }
+}

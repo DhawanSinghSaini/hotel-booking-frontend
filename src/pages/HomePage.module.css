@@ -1,0 +1,274 @@
+/* client/src/pages/HomePage.module.css */
+.homePage {
+  /* Any overall styling for the homepage */
+}
+
+.cover {
+  background-image: url('../assets/cover.avif'); /* Adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh; /* Make it full viewport height */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  color: #fff; /* Default text color */
+  text-align: center; /* Center text within the overlay */
+  width: 98.70vw;
+}
+
+.overlay {
+  padding: 4rem;
+  border-radius: 8px; /* Optional: Rounded corners for the text area */
+}
+
+.headline {
+  font-size: 3rem; /* Adjust as needed */
+  font-weight: bold;
+  margin-bottom: 1rem; /* Space below the headline */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Optional: Text shadow for better visibility */
+}
+
+.feature1{
+  display: flex;
+  padding: 5%;
+  color: black;
+  background-color: white;
+  width: 89.05vw;
+}
+
+.feature1Text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.feature1Text h2{
+  font-size: 40px;
+
+}
+
+.feature1Text p{
+  font-size: 20px;
+
+}
+
+
+.featureImage {
+  width: 30vw; /* Or remove if you want to rely solely on the img attributes */
+  height: 30vw; /* Or remove if you want to rely solely on the img attributes */
+  /* max-width: 500px; Remove this */
+  /* max-height: 500px; Remove this */
+  border-radius: 8px; /* Optional */
+  margin-left: 5%;
+  justify-content: center;
+}
+
+.feature2Image{
+  width: 30vw; /* Or remove if you want to rely solely on the img attributes */
+  height: 30vw; /* Or remove if you want to rely solely on the img attributes */
+  /* max-width: 500px; Remove this */
+  /* max-height: 500px; Remove this */
+  border-radius: 8px; /* Optional */
+  margin-right: 10%;
+  justify-content: center;
+}
+
+
+.featuredHotelsSection {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 40px 0; /* Add some padding top and bottom */
+  width: 99vw;
+}
+
+.featuredHotelsSection  h2{
+  text-align: center;
+  font-size: 3rem;
+}
+
+.featuredHotelsRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.complimentsSection {
+  background-color: #fff; /* Black background, same as featured hotels */
+  color: #000; /* White text */
+  padding: 40px 0; /* Same padding as featured hotels */
+  width: 99vw; /* Same width as featured hotels */
+}
+
+.complimentsRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.complimentCard {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 12%;
+}
+
+.complimentText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.complimentSource {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+
+.carousel {
+  position: relative; /* Stack images on top of each other */
+  width: 100vw; /* Full viewport width */
+  height: 90vh; /* Full viewport height */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.carousel img {
+  position: absolute; /* Stack all images on top of each other */
+  top: 0;
+  left: 0;
+  width: 100%; /* Make each image cover the container */
+  height: 100%; /* Make each image fill the container */
+  object-fit: cover; /* Maintain aspect ratio */
+  opacity: 0; /* Make all images hidden by default */
+  animation: reveal 40s infinite; /* Reveal each image in sequence */
+}
+
+/* Assign animation delays to each image */
+.carousel img:nth-child(1) {
+  animation-delay: 0s;
+}
+.carousel img:nth-child(2) {
+  animation-delay: 5s;
+}
+.carousel img:nth-child(3) {
+  animation-delay: 10s;
+}
+.carousel img:nth-child(4) {
+  animation-delay: 15s;
+}
+.carousel img:nth-child(5) {
+  animation-delay: 20s;
+}
+.carousel img:nth-child(6) {
+  animation-delay: 25s;
+}
+.carousel img:nth-child(7) {
+  animation-delay: 30s;
+}
+.carousel img:nth-child(8) {
+  animation-delay: 35s;
+}
+
+/* Keyframes for revealing images */
+@keyframes reveal {
+  0% {
+    opacity: 0; /* Keep the image hidden */
+  }
+  10% {
+    opacity: 1; /* Make the image visible */
+  }
+  20% {
+    opacity: 0; /* Hide the image again */
+  }
+  100% {
+    opacity: 0; /* Ensure the image stays hidden until its turn comes again */
+  }
+}
+
+
+/* Styles for other sections of the homepage can be added below */
+
+
+@media (max-width: 1180px){
+  .featuredHotelsSection {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 40px 0; /* Add some padding top and bottom */
+    width: 99vw;
+  }
+  
+.featuredHotelsRow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+}
+
+@media (max-width: 870px) {
+  .cover{
+    width: 110vw;
+  }
+
+
+  .feature1 {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally within the column */
+    width: 100vw;
+  }
+
+  .feature1Text {
+    text-align: center; /* Center text on smaller screens */
+    margin-bottom: 20px; /* Add some space below the text */
+  }
+
+  .feature1Image {
+    margin-left: 0; /* Remove left margin on smaller screens */
+    margin-right: 0; /* Remove right margin on smaller screens */
+    width: 50vw; /* Adjust image width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add some space below the image */
+  }
+
+  .feature1Image img{
+    width: 60vw;
+    height: 60vw;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .feature2Text {
+    text-align: center; /* Center text for the second feature on smaller screens */
+    margin-bottom: 20px;
+  }
+
+  .feature2Image {
+    margin-right: 0; /* Remove right margin on smaller screens */
+    width: 50vw; /* Adjust image width for smaller screens */
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .feature2Image img{
+    width: 60vw;
+    height: 60vw;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .featuredHotelsSection {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 40px 0; /* Add some padding top and bottom */
+    width: 110vw;
+  }
+
+  .complimentsSection {
+    width: 110vw;
+  }
+  .complimentsSection .complimentsRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+}

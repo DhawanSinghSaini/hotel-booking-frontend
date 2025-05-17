@@ -1,0 +1,22 @@
+.dashboardContainer {
+  background-color: white;
+  color: black;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Align content in a vertical column */
+  align-items: center; /* Center booking cards horizontally */
+}
+
+.dashboardHeader {
+  text-align: right;
+}
+
+.bookingList {
+  display: flex;
+  flex-direction: column; /* Arrange booking cards in a column */
+  align-items: center; /* Center each booking card */
+  width: 100%;
+  gap: 10px; /* Add space between booking cards */
+}
+

@@ -1,0 +1,96 @@
+.bookingCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Default: Three equal columns */
+    gap: 3%; /* Slightly reduced gap */
+    width: 80%;
+    background-color: #c5c6d0; /* Light gray background */
+    color: black;
+    padding: 2% 4%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) { /* Tablets & smaller laptops */
+    .bookingCard {
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+        grid-template-rows: auto auto; /* 2 rows */
+        padding: 4% 4%;
+        padding-bottom: 8%;
+    }
+}
+
+@media (max-width: 900px) { /* Mobile screens */
+    .bookingCard {
+        grid-template-columns: 1fr; /* 1 column */
+        grid-template-rows: auto auto auto; /* 3 rows */
+        padding: 8% 4%;
+        padding-bottom: 16%;
+        justify-items: center;
+        width: 90%;
+        padding-bottom: 25%;
+    }
+}
+
+/* Hotel Section */
+.bookingHotel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Room Section */
+.bookingRoom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    height: 425px;
+}
+
+/* Booking Details Section */
+.bookingDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 3px; /* Slightly tighter spacing */
+    justify-content: center;
+    text-align: left;
+}
+
+/* Status Styling */
+.status {
+    font-weight: bold;
+}
+
+.status.confirmed {
+    color: green;
+}
+
+.status.pending {
+    color: orange;
+}
+
+.status.cancelled {
+    color: red;
+}
+
+/* Cancel Button Styling */
+.cancelButton {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cancelButton:hover {
+    background-color: darkred;
+}

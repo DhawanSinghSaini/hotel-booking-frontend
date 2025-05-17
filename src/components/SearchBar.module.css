@@ -1,0 +1,73 @@
+/* client/src/components/SearchBar.module.css */
+.searchBar {
+  display: flex;
+  width: 60%; /* Set the width to 60% of its parent */
+  margin: 20px auto; /* Center horizontally with auto margins and add some top/bottom margin */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden; /* To contain rounded borders */
+  background-color: white; /* Set the background of the container to white */
+  border-radius: 60px;
+}
+
+.searchLabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.searchInput {
+  flex-grow: 1;
+  width: 80%;
+  border: none;
+  font-size: 16px;
+  color: black; /* Set the text color to black */
+  background-color: white; /* Set the background of the input to white */
+  padding-left: 20px;
+}
+
+.searchInput::placeholder {
+  color: #666; /* Optional: Style the placeholder text */
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.searchButton {
+  background-color: white; /* Set the background of the button to white */
+  color: #007bff; /* Change the button text/icon color to your desired color (e.g., blue) */
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.searchButton:hover {
+  background-color: #f0f0f0; /* Optional: Slightly gray on hover */
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  fill: #007bff; /* Optional: If your SVG icon has a fill, set it to your desired color */
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

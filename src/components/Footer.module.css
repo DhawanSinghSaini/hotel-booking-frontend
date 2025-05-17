@@ -1,0 +1,50 @@
+.footer {
+    background-color: black;
+    color: white;
+    padding: 0rem 0;
+    text-align: center;
+    width: 100vw;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    padding-top: 2rem;
+  }
+  
+  .company {
+    text-align: left;
+    margin-left: 5%;
+  }
+  
+  .logo {
+    width: 150px; /* Adjust logo size as needed */
+    margin-bottom: 1rem;
+  }
+  
+  .slogan {
+    margin-top: 1rem;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 5%;
+  }
+  
+  .links a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+  }
+  
+  .copyright {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+  }

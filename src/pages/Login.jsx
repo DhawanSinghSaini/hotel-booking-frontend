@@ -21,7 +21,7 @@ function Login() {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/auth/login', {
+      const response = await axios.post('https://hotel-booking-backend-9vmc.onrender.com//auth/login', {
         email,
         password,
       });

@@ -22,7 +22,7 @@ const Dashboard = () => {
         const user = JSON.parse(userData); // Convert string to object
         const userId = user._id; // Extract _id
   
-        const response = await fetch(`http://localhost:3000/bookings/${userId}`, {
+        const response = await fetch(`https://hotel-booking-backend-9vmc.onrender.com/bookings/${userId}`, {
           method: "GET",
           credentials: "include",
           headers: {

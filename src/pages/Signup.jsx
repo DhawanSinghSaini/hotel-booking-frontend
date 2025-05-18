@@ -23,7 +23,7 @@ function Signup() {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/auth/signup", {
+      const response = await axios.post("https://hotel-booking-backend-9vmc.onrender.com/auth/signup", {
         //  Corrected route to /auth/signup
         email,
         password,

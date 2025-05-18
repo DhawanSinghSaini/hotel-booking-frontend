@@ -4,7 +4,7 @@ import axios from "axios";
 import styles from "./BookingPage.module.css";
 import HotelCard from "../components/HotelCard"; 
 import RoomCard from "../components/RoomCard"; 
-import razorpay from "../assets/razorpay.svg";
+import razorpay from "../assets/Razorpay.svg";
 
 const BookingPage = () => {
   const navigate = useNavigate();

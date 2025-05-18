@@ -16,7 +16,7 @@ const BookingCard = ({ booking, onCancel }) => {
   useEffect(() => {
     const fetchHotel = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/hotels/${booking.hotel._id}`);
+        const response = await fetch(`https://hotel-booking-backend-9vmc.onrender.com/hotels/${booking.hotel._id}`);
         const data = await response.json();
 
         if (response.ok) {

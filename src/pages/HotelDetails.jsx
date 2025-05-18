@@ -9,7 +9,7 @@ function HotelDetail() {
   useEffect(() => {
     const fetchHotel = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/hotels/${hotelId}`); // Use the provided URL
+        const response = await fetch(`https://hotel-booking-backend-9vmc.onrender.com/hotels/${hotelId}`); // Use the provided URL
         if (!response.ok) {
           throw new Error("Failed to fetch");
         }

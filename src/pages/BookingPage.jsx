@@ -29,10 +29,10 @@ const BookingPage = () => {
   useEffect(() => {
     const fetchHotelAndRoom = async () => {
       try {
-        const hotelResponse = await axios.get(`http://localhost:3000/hotels/${hotelId}`);
+        const hotelResponse = await axios.get(`https://hotel-booking-backend-9vmc.onrender.com/hotels/${hotelId}`);
         setHotel(hotelResponse.data);
 
-        const roomResponse = await axios.get(`http://localhost:3000/rooms/${roomId}`);
+        const roomResponse = await axios.get(`https://hotel-booking-backend-9vmc.onrender.com/rooms/${roomId}`);
         setRoom(roomResponse.data);
       } catch (err) {
         setError(err);
@@ -56,7 +56,7 @@ const BookingPage = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/bookings", {
+      const response = await axios.post("https://hotel-booking-backend-9vmc.onrender.com/bookings", {
         hotel: hotelId,
         roomType: room.roomType,
         checkInDate,

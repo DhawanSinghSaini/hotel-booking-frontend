@@ -34,7 +34,7 @@ function SearchBar({ onSearch }) {
         onChange={handleInputChange}
         onKeyPress={handleKeyPress}
         className={styles.searchInput}
-        aria-describedby="search-instructions" // Optional: Associate with help text
+        aria-describedby="search-instructions" 
       />
       <button
         onClick={handleSearchClick}
@@ -43,10 +43,6 @@ function SearchBar({ onSearch }) {
       >
         <img src={searchIconUrl} alt="Search" className={styles.searchIcon} />
       </button>
-      {/* Optional: Add help text for screen readers */}
-      {/* <div id="search-instructions" className={styles.visuallyHidden}>
-        Press Enter to search after typing.
-      </div> */}
     </div>
   );
 }

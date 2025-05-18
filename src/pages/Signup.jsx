@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./SignUp.module.css";
+import styles from "./Signup.module.css";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import axios from "axios";
 

@@ -14,7 +14,7 @@ function HotelListPage() {
   useEffect(() => {
     const fetchHotels = async () => {
       try {
-        const response = await fetch('http://localhost:3000/hotels'); // Use your API endpoint
+        const response = await fetch('https://hotel-booking-backend-9vmc.onrender.com/hotels'); // Use your API endpoint
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

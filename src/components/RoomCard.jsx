@@ -12,7 +12,7 @@ const RoomCard = ({ roomId, hotelId }) => {
   useEffect(() => {
     const fetchRoom = async () => {
       try {
-        const response = await fetch(`http://localhost:3000/rooms/${roomId}`); // Use the provided URL
+        const response = await fetch(`https://hotel-booking-backend-9vmc.onrender.com/rooms/${roomId}`); // Use the provided URL
         if (!response.ok) {
           throw new Error("Failed to fetch");
         }

@@ -162,11 +162,9 @@ function About() {
         </p>
         <ul className={styles.contactList}>
           <li>
-            LinkedIn:
             <a href="https://www.linkedin.com/in/dhawan-singh-saini" target="_blank" rel="noopener noreferrer">
                 LinkedIn Profile 🔗
             </a>
-
           </li>
         </ul>
         <p>
